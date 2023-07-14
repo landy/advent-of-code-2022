@@ -25,3 +25,11 @@ let countElfs input =
     elfs |> Array.ofSeq
 
 input |> countElfs |> Array.length |> printfn "Sum of all elfs: %i"
+input |> countElfs |> Array.max |> printfn "Elf with the most energy: %i"
+
+input
+|> countElfs
+|> Array.sortDescending
+|> Array.take 3
+|> Array.sum
+|> printfn "Sum of the three elfs with the most energy: %i"
